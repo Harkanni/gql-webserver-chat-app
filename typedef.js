@@ -1,4 +1,3 @@
-
 const messages = [];
 
 export const typeDefs = `#graphql
@@ -15,6 +14,10 @@ export const typeDefs = `#graphql
    type Mutation {
       addMessage(user: String!, content: String!): Message
    }
+
+   type Subscription {
+      postCreated: Post
+   }
 `;
 
 export const resolvers = {
@@ -25,14 +28,13 @@ export const resolvers = {
   },
 
   Mutation: {
-   addMessage(parent, args) {
+    addMessage(parent, args) {
       const id = messages.length;
       messages.push({
-         id,
-         ...args
-      })
+        id,
+        ...args
+      });
       return messages[id];
-   }
+    }
   }
 };
-
