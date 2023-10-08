@@ -16,7 +16,7 @@ import {
   gql
 } from '@apollo/client';
 
-const PROD_URL = "https://crabby-teal-slippers.cyclic.app/graphql"
+const HTTP_PROD_URL = "https://crabby-teal-slippers.cyclic.app/graphql"
 const WS_PROD_URL = "https://crabby-teal-slippers.cyclic.app/graphql"
 const WS_DEV_URL = "ws://localhost:4000/graphql"
 const HTTP_DEV_URL = "http://localhost:4000/graphql"
