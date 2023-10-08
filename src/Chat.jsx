@@ -36,7 +36,7 @@ const Messages = ({ user }) => {
 
   const { data, loading, error } = useQuery(GET_MESSAGES, { onCompleted: (res) => {
    setDataFromCb(res);
-  } });
+  }});
 
 
   const { subscriptionData, subscription_isloading, subscription_error } =
@@ -46,8 +46,6 @@ const Messages = ({ user }) => {
         console.log(res.subscriptionData.data);
       }
     });
-
-  useEffect(() => {}, []);
 
   // Handle loading and error states
   if (loading) return <p>Loading...</p>;
