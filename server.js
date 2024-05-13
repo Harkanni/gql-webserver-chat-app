@@ -53,18 +53,4 @@ const server = new ApolloServer({
 
  await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
 
-console.log(`🚀 Server ready at http://localhost:4000/`);
-
-
-
-
-// const server = new ApolloServer({
-//   typeDefs,
-//   resolvers
-// });
-
-// const { url } = await startStandaloneServer(server, {
-//   listen: { port: 4000 }
-// });
-
-// console.log(`🚀  Server ready at: ${url}`);
+console.log(`🚀 Server ready at http://localhost:4000/graphql`);
